@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>List of Books</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="secondary" (click)="logout()">
+        <ion-icon slot="icon-only" name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let b of books">
+      <ion-label>{{b.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

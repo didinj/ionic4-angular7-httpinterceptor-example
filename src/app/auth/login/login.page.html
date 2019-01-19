@@ -1,0 +1,25 @@
+<ion-content padding>
+  <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit(loginForm.value)">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Please, Sign In</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Username</ion-label>
+          <ion-input type="text" formControlName="username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+        <ion-item lines="none" lines="full" padding-top>
+          <ion-button expand="full" size="default" shape="round" color="success" type="submit" [disabled]="!loginForm.valid">Login</ion-button>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-button type="button" expand="full" size="default" shape="round" color="medium" (click)="register()">Register</ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>
